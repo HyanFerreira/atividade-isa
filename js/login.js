@@ -7,6 +7,7 @@ document
 
     let usuario = document.getElementById("text").value;
     let password = document.getElementById("password").value;
+    let rememberPassword = document.getElementById("remember-password");
 
     if (usuario === "admin" && password === "admin") {
       window.location.href = "index.html";
@@ -16,5 +17,6 @@ document
     } else {
       document.getElementById("massage-error").innerHTML =
         "Usuário ou senha incorreto!";
+        rememberPassword.classList.toggle("rememberActive")
     }
   });

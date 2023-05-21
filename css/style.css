@@ -269,7 +269,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-top: 15px;
   text-align: center;
   /* font-weight: bolder; */
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Login */
@@ -299,4 +299,17 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .form-login {
   width: 100%;
+}
+
+#remember-password {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 15px;
+    display: none;
+    font-size: 1rem;
+}
+
+#remember-password.rememberActive {
+    display: block;
 }
