@@ -24,8 +24,12 @@ calculateButtonIMC.addEventListener("click", function () {
     mensagem = "Peso normal";
   } else if (imc < 30) {
     mensagem = "Sobrepeso";
+  } else if (imc < 35) {
+    mensagem = "Obesidade grau I";
+  } else if (imc < 40) {
+    mensagem = "Obesidade grau II"
   } else {
-    mensagem = "Obesidade";
+    mensagem = "Obesidade grau III (Obesidade mórbida)"
   }
 
   document.getElementById("result").innerHTML =
