@@ -47,14 +47,29 @@ hamburguer.addEventListener("click", () => {
 btnColor1.addEventListener("click", () => {
   document.body.style.background =
     "linear-gradient(to bottom, #ffffff, #56595a)";
+    hamburguer.classList.remove("active");
+    navColors.classList.remove("active");
+    btnColor1.classList.toggle("selected")
+    btnColor2.classList.remove("selected")
+    btnColor3.classList.remove("selected")
 });
 
 btnColor2.addEventListener("click", () => {
   document.body.style.background =
     "linear-gradient(to bottom, #841ec3, #a68ec6)";
+    hamburguer.classList.remove("active");
+    navColors.classList.remove("active");
+    btnColor2.classList.toggle("selected")
+    btnColor1.classList.remove("selected")
+    btnColor3.classList.remove("selected")
 });
 
 btnColor3.addEventListener("click", () => {
   document.body.style.background =
     "linear-gradient(to bottom, #3399CC, #83b0c7)";
+    hamburguer.classList.remove("active");
+    navColors.classList.remove("active");
+    btnColor3.classList.toggle("selected")
+    btnColor2.classList.remove("selected")
+    btnColor1.classList.remove("selected")
 });
