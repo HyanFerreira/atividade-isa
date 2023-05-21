@@ -13,27 +13,84 @@
     <header class="header-index">
         <div class="header-index-content">
             <div class="header-index-logo">
-                <a href="#">
-                    CalcIMC
+                <a href="login.html">
+                    Sair
                 </a>
             </div>
-            <div class="header-index-perfil">
-                <span>Olá, --</span>
+            <div class="header-index-hamburguer">
+                <div class="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="header-index-hamburguer-relative">
+                    <div class="header-index-hamburguer-position">
+                        <div class="header-index-btnColors">
+                            <button id="btnColor1">Branco/Cinza</button>
+                            <button id="btnColor2">Roxo/Branco</button>
+                            <button id="btnColor3">Padrão</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
     <main class="main-index">
+        <div class="main-index-card-imc">
+            <div class="card-imc">
+                <div class="card-imc-span">
+                    <span>O que é IMC?</span>
+                </div>
+                <div class="card-imc-content">
+                    <p class="card-imc-content-text">IMC significa Índice de Massa Corporal. É uma medida usada para
+                        avaliar se uma pessoa está com peso adequado em relação à sua altura. O IMC é calculado
+                        dividindo o peso (em quilogramas) pelo quadrado da altura (em metros). A fórmula matemática para
+                        calcular o IMC é a seguinte:
+                        <br>
+                        <br>
+                        IMC = peso (kg) / (altura (m) * altura (m))
+                    </p>
+                </div>
+            </div>
+        </div>
         <div class="main-index-content">
-            <div>
-                <label for="peso">Peso (Kg):</label>
-                <input type="number" id="peso">
+            <div class="mian-index-content-body">
+                <h1>Calculadora IMC</h1>
+                <div class="label-input">
+                    <label for="peso">Peso (Kg):</label>
+                    <input type="number" id="peso">
+                </div>
+                <div class="label-input">
+                    <label for="altura">Altura (cm):</label>
+                    <input type="number" id="altura">
+                </div>
+                <button id="button-calculate">Calcular</button>
+                <div id="result"></div>
             </div>
-            <div>
-                <label for="altura">Altura (cm):</label>
-                <input type="number" id="altura">
+        </div>
+        <div class="main-index-card-btnColor">
+            <div class="card-imc">
+                <div class="card-imc-span">
+                    <span>Tabela IMC</span>
+                </div>
+                <div class="card-imc-content">
+                    <p class="card-imc-content-text">A tabela IMC é dada pelo seguinte:
+                        <br>
+                        <br>
+                        Abaixo do peso: IMC abaixo de 18,5
+                        <br>
+                        Peso normal: IMC entre 18,5 e 24,9
+                        <br>
+                        Sobrepeso: IMC entre 25 e 29,9
+                        <br>
+                        Obesidade grau I: IMC entre 30 e 34,9
+                        <br>
+                        Obesidade grau II: IMC entre 35 e 39,9
+                        <br>
+                        Obesidade grau III (obesidade mórbida): IMC igual ou superior a 40
+                    </p>
+                </div>
             </div>
-            <button id="button-calculate" ondblclick="calculateIMC()">Calcular</button>
-            <div id="result"></div>
         </div>
     </main>
     <script src="js/script.js"></script>

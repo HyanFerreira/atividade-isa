@@ -1,4 +1,10 @@
-function calculateIMC() {
+// Calculadora IMC
+
+let calculateButtonIMC = document.getElementById("button-calculate");
+// calculateButtonIMC.addEventListener("click", calculateIMC);
+
+calculateButtonIMC.addEventListener("click", function () {
+  // function calculateIMC() {
   let peso = document.getElementById("peso").value;
   let altura = document.getElementById("altura").value;
 
@@ -10,18 +16,45 @@ function calculateIMC() {
 
   let alturaMetros = altura / 100;
   let imc = peso / (alturaMetros * alturaMetros);
-  let massage;
+  let mensagem;
 
   if (imc < 18.5) {
-    massage = "Abaixo do peso";
+    mensagem = "Abaixo do peso";
   } else if (imc < 25) {
-    massage = "Peso normal";
+    mensagem = "Peso normal";
   } else if (imc < 30) {
-    massage = "Sobrepeso";
+    mensagem = "Sobrepeso";
   } else {
-    massage = "Obesidade";
+    mensagem = "Obesidade";
   }
 
   document.getElementById("result").innerHTML =
-    "Seu IMC é " + imc.toFixed(2) + "<br>" + massage;
-}
+    "Seu IMC é " + imc.toFixed(2) + "<br>" + mensagem;
+});
+
+// hamburguer
+
+const hamburguer = document.querySelector(".hamburguer");
+const navColors = document.querySelector(".header-index-hamburguer-relative");
+
+hamburguer.addEventListener("click", () => {
+  hamburguer.classList.toggle("active");
+  navColors.classList.toggle("active");
+});
+
+// colors
+
+btnColor1.addEventListener("click", () => {
+  document.body.style.background =
+    "linear-gradient(to bottom, #ffffff, #56595a)";
+});
+
+btnColor2.addEventListener("click", () => {
+  document.body.style.background =
+    "linear-gradient(to bottom, #841ec3, #a68ec6)";
+});
+
+btnColor3.addEventListener("click", () => {
+  document.body.style.background =
+    "linear-gradient(to bottom, #3399CC, #83b0c7)";
+});
